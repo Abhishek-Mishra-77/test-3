@@ -11,10 +11,12 @@ const Cart = (props) => {
         {cartContext.Products.map((product) => (
             <CartItem
                 key={product.id}
+                id={product.id}
                 ProductName={product.ProductName}
                 description={product.description}
                 price={product.price}
                 count={product.count}
+                removeCartProduct={cartContext.removeCartProduct}
             >
             </CartItem>
         ))}

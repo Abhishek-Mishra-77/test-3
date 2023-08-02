@@ -10,11 +10,7 @@ const CartItem = (props) => {
                 <span className='price'>{props.price}rs</span>
                 <span className='amount'> x {" "}{props.count}</span>
             </div>
-            <div className='actions'>
-                {/* 
-                <button>-</button>
-                <button >+</button> */}
-            </div>
+            <button onClick={() => props.removeCartProduct(props.id)}>Remove</button>
         </li>
     )
 }

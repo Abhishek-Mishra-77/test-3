@@ -5,7 +5,6 @@ import { ItemProviderContect } from '../ConectApi/ItemProvider';
 const ProductItem = (props) => {
 
     const cartContext = useContext(ItemProviderContect);
-    console.log(cartContext)
 
     return (
         <div className='product'>
@@ -19,7 +18,9 @@ const ProductItem = (props) => {
                             <th>Description</th>
                             <th>Price</th>
                             <th>Quantity</th>
-                            <th>Add To Cart</th>
+                            <th>Buy1</th>
+                            <th>Buy2</th>
+                            <th>Buy3</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,7 +30,9 @@ const ProductItem = (props) => {
                                 <td>{product.description}</td>
                                 <td>{product.price}Rs</td>
                                 <td>1qty</td>
-                            <td>{<button onClick={() => cartContext.addProducts(product)} >Add To Cart</button>}</td>
+                                <td>{<button onClick={() => cartContext.addByOne(product)} >Buy 1 </button>}</td>
+                                <td>{<button onClick={() => cartContext.addByTwo(product)} >Buy 2</button>}</td>
+                                <td>{<button onClick={() => cartContext.addByThree(product)} >Buy 3</button>}</td>
                             </tr>
                         ))}
                     </tbody>
