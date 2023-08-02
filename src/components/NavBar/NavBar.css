@@ -1,0 +1,11 @@
+.cart {
+  margin-top: -50px;
+  margin-right: 40px;
+  display: flex;
+  float: right;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  justify-content: right;
+  align-items: center;
+}
